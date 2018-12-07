@@ -1,0 +1,155 @@
+@import "normalize.less";
+@import "base.less";
+@import "common.less";
+.header {
+  line-height: 1.32rem;
+  background-color: #ff841d;
+  .back {
+    font-size: 0.53rem;
+    float: left;
+    margin-left: 0.4rem;
+    a {
+      color: #fff;
+    }
+  }
+  .title {
+    text-align: center;
+    overflow: hidden;
+    font-size: 0.6rem;
+    color: #fff;
+    margin-right: 1.07rem;
+  }
+}
+.footer {
+  margin-top: 0.67rem;
+}
+
+// 产品区域
+.con-pro {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  .topper {
+    width: 100%;
+    height: 1.07rem;
+    background-color: #fff;
+    i {
+      float: right;
+      width: 1.01rem;
+      height: 1.07rem;
+      background-color: #f4f4f4;
+      font-size: 0.8rem;
+      padding-left: 0.13rem;
+      line-height: 1rem;
+      color: #585757;
+      border-left: 1px solid #c4c4c4;
+    }
+    .pro-title {
+      margin-right: 1.01rem;
+      height: 1.07rem;
+      overflow: hidden;
+      li {
+        width: 33.33%;
+        height: 1.07rem;
+        float: left;
+
+        .nav {
+          display: block;
+          line-height: 1.07rem;
+          font-size: 0.4rem;
+          text-align: center;
+        }
+        .choose {
+          width: 100%;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 1.08rem;
+          left: 0;
+          display: none;
+          li {
+            height: 1.07rem;
+            width: 100%;
+            background-color: #fff;
+            z-index: 999;
+            border-bottom: 0.01rem solid #ccc;
+            position: relative;
+            padding: 0 0.27rem;
+            line-height: 1.07rem;
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font-size: 0.4rem;
+            }
+            .check {
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: 0.53rem;
+              color: #ff841d;
+              background-color: #fff;
+              border: none;
+              height: 1.05rem;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.mm-container .con-pro .topper .pro-title .block {
+  display: block;
+}
+
+.product-list {
+  width: 100%;
+  padding-top: 0.2rem;
+  ul {
+    overflow: hidden;
+
+    li {
+      width: 4.73rem;
+      height: 6rem;
+      background-color: #fff;
+      float: left;
+      margin-left: 0.19rem;
+      margin-top: 0.2rem;
+      padding: 0.13rem;
+
+      .pic {
+        img {
+          width: 100%;
+          height: 4.67rem;
+          margin: 0 auto;
+        }
+      }
+      .txt {
+        font-size: 0.21rem;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 700;
+      }
+      .price {
+        // padding-top: .27rem;
+        line-height: 0.67rem;
+        .terms {
+          color: #f65016;
+          font-size: 0.32rem;
+        }
+        .add-on {
+          float: right;
+          width: 1.4rem;
+          height: 0.53rem;
+          line-height: 0.4rem;
+          text-align: center;
+          margin-top: 0.07rem;
+          font-size: 0.24rem;
+          border: 2px solid #ff8500;
+          background-color: #ff9501;
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

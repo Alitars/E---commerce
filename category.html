@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比价搜索</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html"><i class="logo"></i></a>
+      <i class="download"></i>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+      <button class="fr">搜索</button>
+      <input type="text" placeholder="请输入搜索内容">
+    </div>
+    
+    <!-- category分类区域 -->
+    <div class="category">
+      <ul class="c-title">
+        <li>
+          <a href="#">
+            大家电
+            <i class="fa fa-chevron-down"></i>
+          </a>
+          <ul class="content clearfix">
+            <li>
+              <a href="#">电视</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+         
+      </div>
+    </div>
+  </div>
+<!-- 渲染分类标题 -->
+<script type="text/html" id="category-title">
+{{each result v i}}
+    <li>
+      <a href="javascript:;" data-title-id="{{v.titleId}}">
+        {{v.title}}
+        <i class="fa fa-chevron-down"></i>
+      </a>
+      <ul class="content clearfix move">
+        <li>
+          <a href="#">电视</a>
+        </li>
+      </ul>
+    </li>
+{{/each}}
+</script>
+
+<!-- 分类内容 -->
+<script type="text/html" id="category-info">
+  {{each result v i}}
+    <li>
+      <a href="productlist.html?categoryid={{ v.categoryId }}">{{v.category}}</a>
+    </li>
+  {{/each}}
+</script>
+
+
+
+  
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/index.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
+</body>
+
+</html>

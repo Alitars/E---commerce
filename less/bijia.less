@@ -1,0 +1,207 @@
+@import "normalize.less";
+@import "base.less";
+@import "common.less";
+
+.product-list{
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  .li-title{
+    width: 100%;
+    height: 1.01rem;
+    border-top: .01rem solid #c4c4c4;
+    border-bottom: .01rem solid #c4c4c4;
+    background-image: linear-gradient(#ffffff,#cccccc);
+    padding:0 .21rem;
+    a{
+      font-size: .32rem;
+      height: 1.01rem;
+      line-height: 1.01rem;
+    }
+    .choose{
+      display: block;
+      width: 1.63rem;
+      height: .75rem;
+      float: right;
+      text-align: center;
+      line-height: .75rem;
+      margin-top: .16rem;
+      border-radius: .11rem;
+      // background-color: #fff;
+      background-image: linear-gradient(#d7d7d7,#f5f5f5);
+    }
+  }
+}
+
+.pro-detail{
+  width: 100%;
+  height: 6.75rem;
+  .name{
+    font-size: .48rem;
+    height: 2rem;
+    text-align: center;
+    padding: .53rem .51rem 0;
+  }
+  .pro-img{
+    width: 100%;
+    img{
+      width: 4.61rem;
+      height: 4.61rem;
+      margin: 0 auto;
+    }
+  }
+  .collect{
+    width: 1.07rem;
+    height: 1.07rem;
+    border-radius: 50%;
+    background-color: #91D701;
+    line-height: 1.07rem;
+    text-align: center;
+    color: #fff;
+    font-size: .32rem;
+    border: 1px solid #c4c4c4;
+    position: absolute;
+    right: .64rem;
+    bottom: .53rem;
+  }
+}
+.pro-tab{
+  width: 100%;
+  ul{
+    overflow: hidden;
+    height: .93rem;
+    width: 100%;
+    border-top: 1px solid #b32b00;
+    border-bottom: 1px solid #b32b00;
+    overflow: hidden;
+    li{
+      float: left;
+      text-align: center;
+      font-size: .32rem;
+      width: 33.33%;
+      line-height: .91rem;
+    }
+    li:nth-child(2){
+      border-left: 1px solid #b32b00;
+      border-right: 1px solid #b32b00;
+      background-color: #FFC834;
+    }
+    .buy{
+      background-color: #FF9915;
+    }
+    .comm{
+      background-color: #FFC834;
+    }
+  } 
+}
+
+
+.price{
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  .tobuy{
+    width: 100%;
+    height: 1.13rem;
+    border-bottom: .01rem solid #c4c4c4;
+    font-size: .32rem;
+    line-height: 1.07rem;
+    .icon{
+      height: 100%;
+      img{
+        width: .47rem;
+        padding-top: .35rem;
+        margin-left: .27rem;
+      }
+    }
+    .mall{
+      padding-left: .2rem;
+      height: 1.17rem;
+      line-height: 1.17rem;
+    }
+    .now-pr{
+      color: #cd0117;
+      height: 1.17rem;
+      line-height: 1.17rem;
+      padding-right: .48rem;
+    }
+    .go{
+      width: 1.52rem;
+      height: .67rem;
+      background-color: #ff5500;
+      border-radius: .13rem;
+      text-align: center;
+      line-height: .67rem;
+      margin-top: .25rem;
+      margin-right: .04rem;
+      color: #fff;
+    }
+  }
+
+  .pri-detail{
+    width: 100%;
+    height: 1.47rem;
+    padding: .27rem .2rem;
+    font-size: .32rem;
+    color: #808385;
+  }
+}
+
+// 评论
+.comment{
+  width: 100%;
+  background-color: #fff;
+  .comment-title{
+    width: 100%;
+    height: .88rem;
+    text-align: center;
+    line-height: .88rem;
+    font-size: .32rem;
+    background-color: #DBDBDB;
+    border-top: .03rem solid #606060;
+  }
+  .comment-content{
+    width: 100%;
+    li{
+      border-bottom: 1px solid #c4c4c4;
+      padding: .2rem .2rem .07rem;
+
+    }
+  }
+}
+
+// gd更多评论
+.more-comment{
+  width: 100%;
+  height: 1.67rem;
+  background-color: #fff;
+  padding-top: .27rem;
+  .box{
+    text-align: center;
+    width: 100%;
+    padding-left: .21rem;
+    a{
+      background-image: linear-gradient(#f1f1f1,#d4d4d4);
+      display: block;
+      width: 9.57rem;
+      height: .85rem;
+      font-size: .32rem;
+      border-radius: .13rem;
+      line-height: .85rem;
+    }
+  }
+}
+.red{
+  color: red;
+}
+.p_pic{
+  width: .93rem;
+  height: 100%;
+  a{
+    img{
+      width: .47rem;
+      margin-top: .33rem;
+      margin-left: .27rem;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <a href="#"><i class="logo"></i></a>
+      <i class="download"></i>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+      <button class="fr">搜索</button>
+      <input type="text" placeholder="请输入搜索内容">
+    </div>
+    <!-- 导航区域 -->
+    <div class="nav">
+      <ul class="row">
+        <li>
+          <a href="#">
+            <img src="./images/ic_search.png" alt="">
+            <p>比价搜索</p>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    <!-- 公共区域  折扣上的的文字 -->
+    <div class="common">
+      <span>超值推荐</span>
+      <img src="./images/more.png" alt="">
+    </div>
+    <!-- 产品区域 -->
+    <div class="product">
+      <ul>
+        <li>
+          <a href="#">
+            <div class="fl pic">
+              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100013332286607.jpg"
+                alt="">
+            </div>
+            <div class="info">
+              <div class="title">
+                双11预售：优衣库 女士羊毛混纺大衣 184539
+                <span>40元定金+319元尾款</span>
+              </div>
+              <div class="bottom">
+                <span class="mall">天猫商城 | 10-25 13:32</span>
+                <span class="fr num">3人评论</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="more">
+        <a href="moneyctrl.html">更多优惠信息>>>></a>
+      </div>
+    </div>
+    <!-- 还是common 公共区域 -->
+    <div class="common">
+      <span>品牌排行</span>
+      <img src="./images/more.png" alt="">
+    </div>
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+         
+      </div>
+    </div>
+  </div>
+
+<!-- 菜单导航模板引擎 -->
+<script type="text/html" id="navTmp">
+  {{each result v i}}
+      <li data-id="{{v.indexmenuId}}" style="display:{{i>7?'none' : 'block' }}" data-type="{{i>7? '1':''}}">
+        <a href="{{v.titlehref}}">
+          {{@ v.img}}
+          <p>{{v.name}}</p>
+        </a>
+      </li>
+  {{/each}}
+</script>
+
+<!-- 产品区域模板引擎 -->
+<script type="text/html" id="proTmp">
+  {{each result v i}}
+  <li>
+      <a href="moneyproduct.html?productid={{v.productId}}">
+        <div class="fl pic">
+          <!-- <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/2016100013332286607.jpg"
+            alt=""> -->
+            {{@ v.productImgSm}}
+        </div>
+        <div class="info">
+          <div class="title">
+            {{v.productName}}
+            <span>{{v.productPinkage}}</span>
+          </div>
+          <div class="bottom">
+            <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+            <span class="fr num">{{v.productComCount}}</span>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{/each}}
+</script>
+  
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/flexible/index.js"></script>
+<script src="./lib/template/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+</body>
+
+</html>

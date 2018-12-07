@@ -1,0 +1,154 @@
+@import "normalize.less";
+@import "base.less";
+@import "common.less";
+
+
+.header {
+  line-height: 1.32rem;
+  .back {
+    font-size: 0.53rem;
+    float: left;
+    margin-left: 0.4rem;
+    a {
+      color: #fff;
+    }
+  }
+  .title {
+    text-align: center;
+    overflow: hidden;
+    font-size: 0.6rem;
+    color: #fff;
+    margin-right: 1.07rem;
+  }
+}
+
+.main-container{
+  width: 100%;
+  background-color: #fff;
+  .info{
+    width: 100%;
+    padding: .29rem;
+    h3{
+      font-size: .51rem;
+    }
+    .title-down{
+      font-size: .32rem;
+      padding: .4rem 0;
+      color: #958e8c;
+    }
+    .intr{
+      .intr-img{
+        font-size: .35rem;
+        img{
+          float:right;
+          width: 2.67rem;
+          height: 2.67rem;
+        }
+      }
+      p{
+        font-size: .32rem;
+      }
+    }
+    .big{
+      width: 6rem;
+      height: 6rem;
+      margin-top: .38rem;
+      margin-bottom: .26rem;
+    }
+    
+    .buy-box{
+      width: 100%;
+      height: .8rem;
+      margin-top: .53rem;
+      margin-bottom: .67rem;
+      padding: 0 .27rem;
+      a{
+        background-color: #FF9000;
+        border-radius: .13rem;
+        display: block;
+        width: 100%;
+        height: .8rem;
+        line-height: .8rem;
+        color: #fff;
+        font-size: .32rem;
+        text-align: center;
+      }
+    }
+    .ma-img{
+      margin-bottom: .53rem;
+    }
+
+
+
+    
+    // ajax渲染的评论的样式
+    .city-comment{
+      .tit{
+        font-size: .32rem;
+        margin-bottom: .13rem;
+      }
+      .reply{
+        width: 100%;
+        height: 2.87rem;
+        padding: .13rem;
+        .form{
+          width: 100%;
+          height: 100%;
+          border: .03rem solid #c4c4c4;
+          border-radius: .07rem;
+          textarea {
+            width: 100%;
+            height: 1.93rem;
+          }
+          .ctrl{
+            overflow: hidden;
+            border-top: .01rem solid #f2f2f2;
+            .tjdp{
+              float: right;
+              width: 1.73rem;
+              height: .56rem;
+              background-color: #ff841d;
+              color: #fff;
+              border: 0;
+            }
+          }
+        }
+      }
+      .list{
+        ul{
+          li{
+            overflow: hidden;
+            height: 2.67rem;
+            .userimg{
+              float: left;
+              &>img{
+                float: left;
+                width: 1.12rem;
+                height: 1.12rem;
+                border-radius: 50%;
+              }
+            }
+            .con{
+              padding-top: .2rem;
+              padding-left: .13rem;
+              overflow: hidden;
+              font-size: .21rem;
+              .username{
+                float: left;
+                color: #4a86c2;
+              }
+              .time{
+                float: right;
+                color: #7e7f97;
+              }
+              .content{
+                padding-top: .13rem;
+                font-size: .24rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

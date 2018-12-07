@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>品牌大全</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/brandTitle.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html"><i class="logo"></i></a>
+      <i class="download"></i>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+      <button class="fr">搜索</button>
+      <input type="text" placeholder="请输入搜索内容">
+    </div>
+
+    <!-- 列表面包屑导航 -->
+    <div class="li-title">
+      <a href="index.html">首页></a>
+      <a href="category.html">全部分类></a>
+    </div>
+    <!-- 热门品牌 -->
+    <div class="hot-pro">
+      <p>热门品牌排行</p>
+    </div>
+    <!-- 品牌分类 -->
+    <div class="categoryhot">
+      <ul>
+        <li>
+          <a href="#">
+            ahjdbjahbdj
+            <i class="fa fa-chevron-down fr"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/html" id="categoryhot">
+    {{each result v i}}
+      <li>
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}">
+          {{v.brandTitle}}
+          <i class="fa fa-chevron-down fr"></i>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/index.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/brandTitle.js"></script>
+</body>
+
+</html>

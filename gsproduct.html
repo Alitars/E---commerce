@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>凑单品</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <div class="back"><a href="javascript: history.back();"><i class="fa fa-chevron-left"></i></a></div>
+      <i class="download fr"></i>
+      <div class="title">凑单品</div>
+    </div>
+
+    <div class="con-pro">
+      <div class="topper">
+        <i class="fa fa-search"></i>
+        <div class="pro-title">
+          <ul>
+
+
+
+            <li class="first">
+              <a href="javascript:;" class="nav">
+                <span>京东</span>
+                <em class="fa fa-angle-down"></em>
+              </a>
+              <ul class="choose one">
+
+              </ul>
+            </li>
+
+
+            <li class="center">
+              <a href="javascript:;" class="nav">
+                <span>华北</span>
+                <em class="fa fa-angle-down"></em>
+              </a>
+              <ul class="choose area">
+                <li>
+                  <a href="#">京东</a>
+                  <i class="fa fa-check check"></i>
+                </li>
+              </ul>
+            </li>
+            <li class="all">
+              <a href="javascript:;" class="nav">
+                <span>全部</span>
+                <em class="fa fa-angle-down"></em>
+              </a>
+              <ul class="choose all-sh">
+                <li>
+                  <a href="#">全部</a>
+                  <i class="fa fa-check check"></i>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="product-list">
+      <ul>
+        <li>
+          <div class="pic">
+            <img src="" alt="">
+          </div>
+          <p class="txt  ">廿一客(21cake)专用餐具 1人份(不单独配送)</p>
+          <div class="price">
+            <span class="terms">0.2</span>
+            <span class="add-on">去凑单</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+  </div>
+  <!-- 下拉框 -->
+  <script type="text/html" id="toptab-shop">
+    {{each result v i}}
+      <li data-id="{{v.shopId}}">
+        <a href="#">{{v.shopName}}</a>
+        <i class="fa fa-check check"></i>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 地区 -->
+  <script type="text/template" id="cate_tmp">
+    {{ each result v}}
+    <li data-id="{{v.areaId}}">
+        <a href="javascript:;">{{v.areaName}}</a>
+        <i class="fa fa-check check"></i>
+    </li>
+    {{ /each }}
+  </script>
+
+
+  <!-- 产品区域 -->
+  <script type="text/html" id="pro-list">
+    {{each result v i }}
+      <li>
+          <div class="pic">
+              <img src="{{v.productImg}}" alt="">
+          </div>
+          <p class="txt">{{v.productName}}</p>
+          <div class="price">
+              <span class="terms">{{v.productPrice}}</span>
+              <span class="add-on">去凑单</span>
+          </div>
+      </li>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/index.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./lib/iscroll/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/gsproduct.js"></script>
+</body>
+
+</html>

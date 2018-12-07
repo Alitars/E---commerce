@@ -1,0 +1,57 @@
+@import "normalize.less";
+@import "base.less";
+@import "common.less";
+
+
+// 分类
+.category{
+  width:100%;
+  border: .03rem solid #c4c4c4;
+  .c-title>li{
+    width: 100%;
+    background-color: #EDEDED;
+    &>a{
+      display: block;
+      color: #000;
+      font-size: .32rem;
+      width: 100%;
+      height: 100%;
+      line-height: 1.07rem;
+      padding-left: .4rem;
+      font-weight: 700;
+      border-bottom: .01rem solid #ccc;
+      position: relative;
+      i{
+        position: absolute;
+        right: .36rem;
+        top: .4rem;
+      }
+    }
+    .content{
+      background-color: #f9f9f9;
+      &.move{
+        display: none;
+      }
+      &>li{
+        width: 33.33%;
+        border-bottom:1px solid #c4c4c4; 
+        border-right:1px solid #c4c4c4; 
+        float: left;
+        height: 1.07rem;
+        &>a{
+          display: block;
+          color: #333;
+          width: 100%;
+          height: 100%;
+          line-height: 1.04rem;
+          font-size: .27rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.footer{
+  
+  margin: .67rem 0;
+}

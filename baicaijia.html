@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>白菜价</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/baicaijia.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <div class="back"><a href="javascript: history.back();"><i class="fa fa-chevron-left"></i></a></div>
+      <i class="download fr"></i>
+      <div class="title">白菜价-淘宝内部券</div>
+    </div>
+
+    <div class="con-pro">
+      <div class="topper">
+        <i class="fa fa-search"></i>
+        <div class="pro-title">
+          <ul>
+            <li>
+              <a href="javascript:;">全部</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="pro-content">
+        <ul>
+          <li>
+            <div class="img">
+              <img src="http://seller.manmanbuy.com/ProPic/201610001011557381.jpg">
+            </div>
+            <!-- postage包邮 -->
+            <div class="info">
+              <div class="post">
+                <span class="b">[包邮]</span>车内车载空气净化器除异味甲醛烟味
+              </div>
+              <div class="price">
+                <i class="back">券后</i><i class="money">¥</i>10.0<i class="rmb">¥25</i>
+              </div>
+              <div class="shop"><a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798"
+                  class="goquan" target="_blank"></a><i class="ibox"><i class="percent" style="width:1%;"></i><span>1%</span></i><b>已领82张</b></div>
+              <div class="conpon">
+                <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&amp;sellerId=2246833798"
+                  target="_blank">点此领15元优惠券</a>
+              </div>
+              <div class="link">
+                
+                <a biz-itemid="42386145436" isconvert="1" href="https://detail.tmall.com/item.htm?spm=a230r.1.14.6.4Gwvqj&amp;id=42386145436"
+                  target="_blank">下单链接</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- title渲染 -->
+  <script type="text/html" id="pro-title">
+    {{each result v i}}
+      <li data-id="{{v.titleId}}">
+        <a href="javascript:;">{{v.title}}</a>
+      </li>
+    {{/each}}
+  </script>
+
+  <!-- 产品渲染 -->
+  <script type="text/html" id="pro-detail">
+    {{each result v i}}
+      <li>
+        <div class="img">
+          {{@v.productImg}}
+        </div>
+        <!-- postage包邮 -->
+        <div class="info">
+          <div class="post">
+            {{@v.productName}}
+          </div>
+          <div class="price">
+            <i class="back">券后</i>{{@v.productPrice}}
+          </div>
+          {{@v.productCouponRemain}}
+          <div class="conpon">
+            {{@v.productCoupon}}
+          </div>
+          <div class="link">
+            
+            {{@v.productHref}}
+          </div>
+        </div>
+      </li>
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/index.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./lib/iscroll/iscroll.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/baicaijia.js"></script>
+</body>
+
+</html>

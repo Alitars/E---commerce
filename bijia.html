@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>商业列表</title>
+  <link rel="stylesheet" href="./fonts/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+</head>
+<script src="./lib/flexible/index.js"></script>
+
+<body>
+  <div class="mm-container">
+    <!-- 头部 -->
+    <div class="header">
+      <a href="index.html"><i class="logo"></i></a>
+      <i class="download"></i>
+    </div>
+    <!-- 搜索框 -->
+    <div class="search">
+      <button class="fr">搜索</button>
+      <input type="text" placeholder="请输入搜索内容">
+    </div>
+    <!-- 列表 -->
+    <div class="product-list">
+      <div class="li-title">
+        <a href="index.html">首页></a>
+        <span class="two"><a href="category.html">电视></a></span>
+        <span class="three"><a href="javascript:;">飞利浦</a></span>
+        <a href="javascript:;" class="choose">筛选</a>
+      </div>
+      <div class="pro-detail">
+        <div class="name">
+          乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+        </div>
+        <div class="pro-img">
+          <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视"
+            width="170">
+        </div>
+        <div class="collect">收藏</div>
+      </div>
+    </div>
+    <!-- 比价产品下的tab框 -->
+    <div class="pro-tab">
+      <ul>
+        <li class="buy">
+          <a href="#">比价购买</a>
+        </li>
+        <li class="argu">
+          <a href="#">产品参数</a>
+        </li>
+        <li class="comm">
+          <a href="#">评论</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 商品价格区域 -->
+    <div class="price">
+      <div class="tobuy">
+        <!-- <div class="icon fl">
+          <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+        </div>
+        <div class="mall fl">京东商场</div>
+        <div class="fr go ">购买</div>
+        <div class="fr now-pr">￥99999</div> -->
+      </div>
+      <div class="pri-detail">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+      </div>
+    </div>
+    <!-- 评论区域 -->
+    <div class="comment">
+      <div class="comment-title">网友评论</div>
+      <div class="comment-content">
+        <ul>
+          <li>
+            <div class="clearfix">
+              <span class="fl">csb</span>
+              <span class="fr">2018/12/5</span>
+            </div>
+            <div class="clearfix">
+              <span class="fr">购买自：京东商城</span>
+            </div>
+            <div class="com-info">
+              使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 更多评价 -->
+    <div class="more-comment">
+      <div class="box">
+        <a href="#">更多评论</a>
+      </div>
+    </div>
+
+    <!-- 底部区域 -->
+    <div class="footer">
+      <div class="top">
+        <a href="javascript:;">登陆</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;" class="toTop"><i class="fa fa-arrow-circle-o-up"></i>返回顶部</a>
+      </div>
+      <div class="bottom">
+        <p>
+          <a href="#" class="mobile">手机APP下载</a>
+          <a href="#">慢慢买手机版</a>
+          -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+
+      </div>
+    </div>
+  </div>
+  <!-- 面包屑渲染 二级导航-->
+  <script type="text/html" id="two-Tmp">
+    {{each result v i}}   
+      <a href="productlist.html?categoryid={{v.categoryId}}&value={{v.category}}">{{v.category}}></a>   
+    {{/each}}
+  </script>
+  <!-- 3级导航 -->
+  <script type="text/html" id="three-tmp">
+    <a href="javascript:;">{{list}}</a>
+  </script>
+
+  <!-- tab栏下的 价格 -->
+  <script type="text/html" id="mm-tab">
+    {{@result[0].bjShop}}
+  </script>
+  <!-- 产品详细信息 -->
+  <script type="text/html" id="info-Tmp">
+    {{each result v i}}
+      <div class="name">
+        {{v.productName}}
+      </div>
+      <div class="pro-img">
+        {{@ v.productImg}}
+      </div>
+      <div class="collect">收藏</div>
+    {{/each}}
+  </script>
+
+  <!-- 商品评论区域 -->
+  <script type="text/html" id="comment-tmp">
+    {{each result v i }}
+      <li>
+        <div class="clearfix">
+          <span class="fl">{{v.comName}}</span>
+          <span class="fr">{{v.comTime}}</span>
+        </div>
+        <div class="clearfix">
+          <span class="fr">{{v.comFrom}}</span>
+        </div>
+        <div class="com-info">
+        {{v.comContent}}
+        </div>
+      </li>
+    {{/each}}
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/index.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/bijia.js"></script>
+</body>
+
+</html>
